@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function escribirResultado() {
+            realizarOperacion(operacion.value);
+        }
+
+        function realizarOperacion(value){
+            num1 = parseInt(num1.value);
+            num2 = parseInt(num2.value);
+
+            var res = parseInt(value);
+
+            if (value == 0) {
+                res = sumar(num1, num2);
+            } else if (value == 1) {
+                res = restar(num1, num2);
+            } else if (value == 2) {
+                res = dividir(num1, num2);
+            } else if (value == 3) {
+                res = multiplicar(num1, num2);
+            }
+            return res;
+        }
+
+        function sumar(num1, num2){
+            resultado.value = num1 + num2;
+        }
+        function restar(num1, num2){
+            resultado.value = num1 - num2;
+        }
+        function dividir(num1, num2){
+            resultado.value = num1 / num2;
+        }
+        function multiplicar(num1, num2){
+            resultado.value = num1 * num2;
+        }
+    </script>
+</head>
+
+<body>
+    <div style="text-align: center;">
+        <form name="fomulario"> 
+            Valoración sobre este web: 
+            
+            <br> 
+            <br>
+            Número 1:<input type="number" id="num1" value="20" />
+            <br />
+            Número 2: <input type="number" id="num2" value="30">
+            <br />
+            <select id="operacion"> 
+                <option value="0" selected>Suma 
+                <option value="1">Resta 
+                <option value="2">División
+                <option value="3">Multiplicación 
+            </select> 
+            Resultado:<input type="text" id="resultado" />
+            <input type=button value="Dime propiedades" onclick="escribirResultado()"> 
+        </form>
+        
+    </div>
+</body>
+
+</html>

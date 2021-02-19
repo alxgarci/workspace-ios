@@ -4,6 +4,6 @@
 
 | 1er Trimestre: | 2do Trimestre |
 | -------------- | ------------- |
-| -EjEstructuras | -EjOrdenador |
-| -EjSimplesOperadores | |
+| - EjEstructuras | - EjOrdenador |
+| - EjSimplesOperadores | - JavaScript > ejercicioCalculadora|
 
