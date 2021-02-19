@@ -5,41 +5,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Calculadora JS</title>
     <script>
         function escribirResultado() {
             realizarOperacion(operacion.value);
         }
 
         function realizarOperacion(value){
-            num1 = parseInt(num1.value);
-            num2 = parseInt(num2.value);
+            let numero1 = Number(num1.value);
+            let numero2 = Number(num2.value);
 
-            var res = parseInt(value);
+            var res = Number(value);
 
             if (value == 0) {
-                res = sumar(num1, num2);
+                res = sumar(numero1, numero2);
             } else if (value == 1) {
-                res = restar(num1, num2);
+                res = restar(numero1, numero2);
             } else if (value == 2) {
-                res = dividir(num1, num2);
+                res = dividir(numero1, numero2);
             } else if (value == 3) {
-                res = multiplicar(num1, num2);
+                res = multiplicar(numero1, numero2);
             }
             return res;
         }
 
-        function sumar(num1, num2){
-            resultado.value = num1 + num2;
+        function sumar(numero1, numero2){
+            resultado.value = numero1 + numero2;
         }
-        function restar(num1, num2){
-            resultado.value = num1 - num2;
+        function restar(numero1, numero2){
+            resultado.value = numero1 - numero2;
         }
-        function dividir(num1, num2){
-            resultado.value = num1 / num2;
+        function dividir(numero1, numero2){
+            resultado.value = numero1 / numero2;
         }
-        function multiplicar(num1, num2){
-            resultado.value = num1 * num2;
+        function multiplicar(numero1, numero2){
+            resultado.value = numero1 * numero2;
         }
     </script>
 </head>
@@ -47,13 +47,12 @@
 <body>
     <div style="text-align: center;">
         <form name="fomulario"> 
-            Valoración sobre este web: 
-            
+            Introduce los números y selecciona la operación:
             <br> 
             <br>
-            Número 1:<input type="number" id="num1" value="20" />
+            Número 1:<input type="text" id="num1" value="20" />
             <br />
-            Número 2: <input type="number" id="num2" value="30">
+            Número 2: <input type="text" id="num2" value="30">
             <br />
             <select id="operacion"> 
                 <option value="0" selected>Suma 
@@ -62,7 +61,7 @@
                 <option value="3">Multiplicación 
             </select> 
             Resultado:<input type="text" id="resultado" />
-            <input type=button value="Dime propiedades" onclick="escribirResultado()"> 
+            <input type=button value="Dime propiedades" onclick="escribirResultado();"> 
         </form>
         
     </div>
